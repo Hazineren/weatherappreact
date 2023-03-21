@@ -1,0 +1,34 @@
+.cardMain {
+    display: flex
+}
+
+.cardItem {
+    display: flex;
+    margin: 3px;
+    flex-direction: column;
+    align-items: center;
+    flex-basis: 33%;
+    flex-grow: 1;
+    border: 2px solid black;
+    text-align: center;
+    border-radius: 5px;
+    background-color: rgb(231, 218, 202);
+}
+#cardHead{
+    font-weight: bold;
+    color:#f3efef;
+    margin: auto 50%;
+    font-size: 35px;
+    box-shadow: 3px 3px 10px 6px rgba(0, 0, 0, 0.06);
+}
+
+#img{
+    background-image: url('../../assets/clouds.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100vh;
+
+}
+#cardContain{
+    padding: 15px;
+}
