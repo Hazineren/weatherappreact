@@ -13,6 +13,7 @@ function Card({dailyWeathList}) {
       const dayOfWeek = ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'][date.getDay()];
 
       return (
+        // Her gün için gösterilecek bir card tasarımı oluşturuldu
         <div className='cardItem' key={item.dt}>
           <p>{dayOfWeek}</p>
           <img src={`http://openweathermap.org/img/w/${item.weather[0].icon}.png`} alt={item.weather[0].description} />

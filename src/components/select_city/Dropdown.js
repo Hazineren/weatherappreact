@@ -10,6 +10,7 @@ function Dropdown({selected, setSelected}) {
       <div className='dropdown-btn' onClick={(e) => setIsActive(!isActive)}>{selected ? selected:'Choose City'}</div>
       {isActive && (
         <div className='dropdown-content'>
+          {/* Dropdown içerisinden seçilen şehri tutuyoruz*/}
           {cities.map((city, key) => (
             <div key={key} className='dropdown-item' onClick={e => {
               setSelected(city)

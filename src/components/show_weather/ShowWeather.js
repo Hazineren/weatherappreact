@@ -17,6 +17,7 @@ function ShowWeather() {
         const longitude = position.coords.longitude;
         setLatitude(latitude);
         setLongitude(longitude);
+        // Sayfa ilk açıldığında konuma göre şehir belirledim
         axios(`http://api.openweathermap.org/data/2.5/weather?lat=${latitude}&lon=${longitude}&appid=aab77b1efa83401cf064f96662d95239`)
           .then((res) => {
             if (res.data.name === 'Kağıthane') {
@@ -35,6 +36,7 @@ function ShowWeather() {
   }, []);
   useEffect(() => {
     if (selected) {
+      // Seçilen şehre ait data getiriliyor.
       axios(`https://api.openweathermap.org/data/2.5/forecast?q=${selected}&appid=aab77b1efa83401cf064f96662d95239&units=metric&lang=tr&cnt=7`)
         .then((res) => {
           setDailyWeathList(res.data.list)
